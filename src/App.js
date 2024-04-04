@@ -109,11 +109,7 @@ const [init, setInit] = useState(false);
   );
   return (
     <div className='flex flex-col h-full bg-[#2E2E2E]'>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      
       <Navbar />
       <Home />
       <About />
@@ -122,7 +118,11 @@ const [init, setInit] = useState(false);
       <Skills/>
       <Contact/>
       <Footer/>
-      
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
 
     </div>
   );
