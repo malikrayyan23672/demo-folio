@@ -1,0 +1,43 @@
+.project-container .left-icon, .right-icon{
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    background-color: white;
+    color: black;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-container .left-icon{
+    left: 22px;
+}
+
+.project-container .right-icon{
+    right: 22px;
+    background-color: none;
+    cursor: pointer;
+}
+
+.project-container.dragging .project-card{
+    cursor: grab;
+    user-select: none;
+}
+
+@media (max-width: 639px) {
+    .project-container{
+        width: 100%;
+    }
+   .project-card{
+    width: 450px;
+   } 
+}
+@media (max-width: 400px) {
+    .project-container{
+        width: 100%;
+    }
+   .project-card{
+    width: 320px;
+   } 
+}
