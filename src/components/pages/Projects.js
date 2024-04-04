@@ -5,7 +5,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import "./Project.css";
 
 import Textanim from "../containers/Textanim";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 function Projects() {
 
     const [project,setProject] = useState([
@@ -19,10 +19,25 @@ function Projects() {
 
     ])
 
-    console.log('hi')
+    const [scroll, setScroll] = useState(0);
+    const carouselRef = useRef(null);
+
+    function handleLeftClick(){
+
+        carouselRef.current.scrollLeft -= 340;
+        console.log('hi')
+
+    }
+    
+    function handleRightClick(){
+        carouselRef.current.scrollLeft += 340;
+    }
 
     useEffect(() => {
         const carousel = document.getElementById('carousel');
+        const left_btn = document.getElementById('left-btn');
+
+        carousel.scrollLeft += scroll;
 
         let isDragging = false ,startX, startScrollLeft;
 
@@ -52,19 +67,21 @@ function Projects() {
     })
 
     return (
-        <section className="Projects h-full mt-24 max-lg:h-full">
+        <section className="Projects h-full relative mt-24 max-lg:h-full">
 
             <div className="flex flex-col text-center">
                 <Textanim text="Projects" fading="fade-right"/>
             </div>
 
-            <div id="carousel" className="grid relative grid-cols-4 overflow-hidden gap-3 p-3 w-full max-md:grid-cols-2 max-xl:grid-cols-3 max-sm:grid-cols-1 max-sm:grid-flow-col-dense max-sm:overflow-scroll mt-7 project-container">
+            <FaChevronLeft onClick={handleLeftClick} className="absolute" id="left-btn"/>
+
+            <div id="carousel" ref={carouselRef} className="grid relative grid-cols-4 overflow-hidden gap-3 p-3 w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-sm:grid-cols-1 max-sm:grid-flow-col-dense max-sm:overflow-scroll mt-7 project-container">
 
 
                 {project.map((item) => (
-                    <div className={"w-full"} data-aos="flip-right" data-aos-duration="700" data-aos-delay="50">
+                    <div className={"w-full"} data-aos="fade-in" data-aos-duration="700" data-aos-delay="50">
 
-                        <div className={"w-full project-card hover:scale-105 transition-all border-gray-600 rounded-md text-center flex flex-col gap-3"}>
+                        <div className={"w-full project-card transition-all border-gray-600 rounded-md text-center flex flex-col gap-3"}>
                             <div className="bg-gray-600 w-full flex justify-center items-center" draggable="false">
                                 <img src={item.thumbnail} />
                             </div>
@@ -85,6 +102,8 @@ function Projects() {
                 ))}
 
             </div>
+            
+            <FaChevronRight onClick={handleRightClick} className="absolute right-btn" id="right-btn"/>
 
         </section>
     );
