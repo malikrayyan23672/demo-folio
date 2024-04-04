@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 function Projects() {
 
     const [project,setProject] = useState([
-        {title: "demo-folio" , thumbnail: "./assets/images/react-logo.jpg", descriptoin: "My personal Portfolio", href: "https://github.com/malikrayyan23672/demo-folio"},
+        {title: "demo-folio" , thumbnail: "./assets/images/react-logo.png", descriptoin: "My personal Portfolio", href: "https://github.com/malikrayyan23672/demo-folio"},
         
 
     ]);
