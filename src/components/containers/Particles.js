@@ -1,22 +1,12 @@
-import './App.css';
-import { useCallback, useEffect,useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-import Navbar from './components/navigation/Navbar';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Projects from './components/pages/Projects';
-import Experience from './components/pages/Experience';
-import Aos from 'aos';
-import Skills from './components/pages/Skills';
-import Contact from './components/pages/Contact';
-import Footer from './components/pages/Footer';
+// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-function App() {
-    useEffect(() => {
-      Aos.init();
-    })
-const [init, setInit] = useState(false);
+const App = () => {
+  const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -41,7 +31,7 @@ const [init, setInit] = useState(false);
     () => ({
       background: {
         color: {
-          value: "#2E2E2E",
+          value: "#0d47a1",
         },
       },
       fpsLimit: 120,
@@ -107,25 +97,16 @@ const [init, setInit] = useState(false);
     }),
     [],
   );
-  return (
-    <div className='flex flex-col h-full bg-[#2E2E2E]'>
+
+  if (init) {
+    return (
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
       />
-      <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      {/* <Experience /> */}
-      <Skills/>
-      <Contact/>
-      <Footer/>
-      
+    );
+  }
 
-    </div>
-  );
-}
-
-export default App;
+  return <></>;
+};

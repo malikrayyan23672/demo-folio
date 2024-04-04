@@ -9,12 +9,7 @@ import { useEffect, useRef, useState } from "react";
 function Projects() {
 
     const [project,setProject] = useState([
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
-        {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
+        {title: "demo-folio" , thumbnail: "./assets/images/react-logo.jpg", descriptoin: "My personal Portfolio", href: "https://github.com/malikrayyan23672/demo-folio"},
         
 
     ]);
@@ -59,7 +54,7 @@ function Projects() {
 
 
     return (
-        <section className="Projects h-full relative mt-24 max-lg:h-full">
+        <section className="Projects z-10 h-full relative mt-24 max-lg:h-full">
 
             <div className="flex flex-col text-center">
                 <Textanim text="Projects" fading="fade-right"/>

@@ -5,7 +5,7 @@ import { MdWavingHand } from "react-icons/md";
 function Home() {
 
     return (
-        <section className="Home" name="Home">
+        <section className="Home z-10" name="Home">
             <div className="flex flex-col gap-4 h-screen w-full justify-center items-center">
 
                 {/* <div className="relative w-64 h-64 border-2 flex flex-col justify-center items-center rounded-full">

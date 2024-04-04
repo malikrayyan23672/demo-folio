@@ -13,7 +13,7 @@ function About() {
         AOS.init();
     }, [])
     return (
-        <section className="About w-full h-full max-xl:h-full" name="About">
+        <section className="About z-10 w-full h-full max-xl:h-full" name="About">
             <div className="flex flex-col text-center gap-8">
 
                 <Textanim fading="fade-left" text="About Me"/>

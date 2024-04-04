@@ -5,7 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 
 function Contact(){
     return(
-        <section className="Contact h-96 mt-24 overflow-hidden">
+        <section className="Contact h-96 z-10 mt-24 overflow-hidden">
             <div>
                 <Textanim text="Contact" fading="fade-left" />
             </div>

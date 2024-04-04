@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {Link} from 'react-scroll'
 import {animateScroll} from 'react-scroll'
+import './Navbar.css'
 
 function classNames(...classes){
     return classes.filter(Boolean).join(" ");
@@ -37,7 +38,7 @@ function Navbar(){
         setNavigation(newNav);
     }
     return(
-        <div className="w-full m-auto bg-[#1F2125] fixed top-0 z-10">
+        <div className="w-full m-auto bg-[#1F2125] fixed top-0 z-20">
 
             <nav className="p-4 bg-[#1F2125] w-max m-auto">
                 <ul className="flex flex-row gap-2">
