@@ -17,7 +17,7 @@ function Projects() {
         {title: "University Student Portal" , thumbnail: "./assets/images/laravel-logo.jpg", descriptoin: "A webstite for students in which student can upload and check their homework", href: ""},
         
 
-    ])
+    ]);
 
     const [scroll, setScroll] = useState(0);
     const carouselRef = useRef(null);
@@ -49,6 +49,7 @@ function Projects() {
         }
         carouselRef.current.scrollLeft = startScrollLeft - (e.pageX - startX);
         // carouselRef.current.scrollLeft = e.pageX;
+        
     }
 
     // carouselRef.current.addEventListener('mousedown', startDragging);
@@ -66,7 +67,7 @@ function Projects() {
 
             <FaChevronLeft onClick={handleLeftClick} className="absolute" id="left-btn"/>
 
-            <div id="carousel" onMouseMove={dragging} onMouseDown={startDragging} onMouseUp={stopDragging} ref={carouselRef} className="grid relative grid-cols-auto grid-flow-col gap-3 p-3 w-full max-sm:grid-cols-1 max-sm:grid-flow-col-dense max-sm:overflow-scroll mt-7 project-container">
+            <div id="carousel" onMouseDown={startDragging} onMouseUp={stopDragging} onMouseMove={dragging}  ref={carouselRef} className="grid relative grid-cols-auto grid-flow-col gap-3 p-3 w-full max-sm:grid-cols-1 max-sm:grid-flow-col-dense mt-7 project-container">
 
 
                 {project.map((item) => (
@@ -74,12 +75,12 @@ function Projects() {
 
                         <div className={"w-full project-card transition-all border-gray-600 rounded-md text-center flex flex-col gap-3"}>
                             <div className="bg-gray-600 w-full flex justify-center items-center" draggable="false">
-                                <img src={item.thumbnail} />
+                                <img id="thumbnail" src={item.thumbnail} />
                             </div>
-                            <div className="px-3 py-5 flex flex-col gap-9">
+                            <div className="px-3 py-5 flex flex-col gap-9 max-sm:gap-4">
                                 <p className="font-semibold text-2xl">{item.title}</p>
                                 <p className="">{item.descriptoin}</p>
-                                <div className="flex flex-row gap-2 justify-center">
+                                <div className="flex flex-row gap-2 justify-center" id="programming-languages">
                                     <p className="px-3 py-1 cursor-pointer hover:bg-sky-700 font-semibold transition-all border-2 rounded-md">PHP</p>
                                     <p className="px-3 py-1 cursor-pointer hover:bg-sky-700 font-semibold transition-all border-2 rounded-md">Laravel</p>
                                 </div>
