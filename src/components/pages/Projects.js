@@ -23,48 +23,39 @@ function Projects() {
     const carouselRef = useRef(null);
 
     function handleLeftClick(){
-
         carouselRef.current.scrollLeft -= 340;
-        console.log('hi')
-
     }
     
     function handleRightClick(){
         carouselRef.current.scrollLeft += 340;
     }
+    let isDragging = false, startX, startScrollLeft;
 
-    useEffect(() => {
-        const carousel = document.getElementById('carousel');
-        const left_btn = document.getElementById('left-btn');
+    const startDragging = (e) => {
+        isDragging = true;
+        carouselRef.current.classList.add("dragging")
+        startX = e.pageX;
+        startScrollLeft = carouselRef.current.scrollLeft;
+    }
 
-        carousel.scrollLeft += scroll;
+    const stopDragging = () => {
+        isDragging = false;
+        carouselRef.current.classList.remove("dragging");
+    }
 
-        let isDragging = false ,startX, startScrollLeft;
-
-        const startDragging = (e) => {
-            isDragging = true;
-            carousel.classList.add("dragging")
-
-            startX = e.pageX;
-            startScrollLeft = carousel.scrollLeft;
+    const dragging = (e) => {
+        if (!isDragging) {
+            return;
         }
+        carouselRef.current.scrollLeft = startScrollLeft - (e.pageX - startX);
+        // carouselRef.current.scrollLeft = e.pageX;
+    }
 
-        const stopDragging = () => {
-            isDragging = false;
-            carousel.classList.remove("dragging");
-        }
+    // carouselRef.current.addEventListener('mousedown', startDragging);
 
-        const dragging = (e) => {
-            if(!isDragging){
-                return;
-            }
-            carousel.scrollLeft = startScrollLeft -  (e.pageX - startX);
-        }
+    // carouselRef.current.addEventListener('mouseup', stopDragging);
+    // carouselRef.addEventListener('mousemove', dragging);
 
-        carousel.addEventListener('mousedown', startDragging);
-        carousel.addEventListener('mousemove', dragging);
-        carousel.addEventListener('mouseup', stopDragging);
-    })
 
     return (
         <section className="Projects h-full relative mt-24 max-lg:h-full">
@@ -75,7 +66,7 @@ function Projects() {
 
             <FaChevronLeft onClick={handleLeftClick} className="absolute" id="left-btn"/>
 
-            <div id="carousel" ref={carouselRef} className="grid relative grid-cols-4 overflow-hidden gap-3 p-3 w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-sm:grid-cols-1 max-sm:grid-flow-col-dense max-sm:overflow-scroll mt-7 project-container">
+            <div id="carousel" onMouseMove={dragging} onMouseDown={startDragging} onMouseUp={stopDragging} ref={carouselRef} className="grid relative grid-cols-auto grid-flow-col gap-3 p-3 w-full max-sm:grid-cols-1 max-sm:grid-flow-col-dense max-sm:overflow-scroll mt-7 project-container">
 
 
                 {project.map((item) => (

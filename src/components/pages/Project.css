@@ -1,6 +1,6 @@
 #left-btn, #right-btn{
     cursor: pointer;
-    display: none;
+    display: block;
     border-radius: 50%;
     background-color: #cccccc3d;
     text-align: center;
@@ -22,8 +22,21 @@
     right: .5rem;
 }
 
+.project-card{
+    width: 350px;
+    user-select: none;
+}
+
+.project-container{
+    background-color: #242424;
+    scroll-behavior: smooth;
+    user-select: none;
+    overflow: hidden;
+}
+
 .project-container.dragging .project-card{
     cursor: grab;
+    scroll-behavior: smooth;
     user-select: none;
 }
 
@@ -39,13 +52,13 @@
 @media (max-width: 600px) {
     .project-container{
         width: 100%;
-        padding-left: 2rem;
-        grid-template-columns: repeat(4, minmax(330px, 1fr));
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
     #left-btn, #right-btn{
         display: block;
     }
    .project-card{
-    width: 320px;
+    width: 250px;
+    min-height: fit-content;
    } 
 }
