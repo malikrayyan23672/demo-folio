@@ -27,18 +27,18 @@ function About() {
                         </div>
                         <div className="flex gap-2 justify-start">
 
-                            <a href="#">
+                            <a href="https://github.com/malikrayyan23672">
                                 <IoLogoGithub className="w-auto p-2 border-2 hover:bg-slate-500 rounded-full h-14" />
                             </a>
 
-                            <a href="#">
+                            <a href="www.facebook.com">
                                 <IoLogoFacebook className="w-auto p-2 border-2 hover:bg-slate-500 rounded-full h-14" />
                             </a>
 
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/malik-rayyan-b3477a20a/">
                                 <IoLogoLinkedin className="w-auto p-2 border-2 hover:bg-slate-500 rounded-full h-14" />
                             </a>
-                            <a href="#">
+                            <a href="www.twitter.com">
                                 <IoLogoTwitter className="w-auto p-2 border-2 hover:bg-slate-500 rounded-full h-14" />
                             </a>
                         </div>

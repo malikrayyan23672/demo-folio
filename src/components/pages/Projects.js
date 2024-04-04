@@ -68,17 +68,17 @@ function Projects() {
                 {project.map((item) => (
                     <div className={"w-full"} data-aos="fade-in" data-aos-duration="700" data-aos-delay="50">
 
-                        <div className={"w-full project-card transition-all border-gray-600 rounded-md text-center flex flex-col gap-3"}>
+                        <div className={"w-full m-auto project-card transition-all border-gray-600 rounded-md text-center flex flex-col gap-3"}>
                             <div className="bg-gray-600 w-full flex justify-center items-center" draggable="false">
                                 <img id="thumbnail" src={item.thumbnail} />
                             </div>
                             <div className="px-3 py-5 flex flex-col gap-9 max-sm:gap-4">
                                 <p className="font-semibold text-2xl">{item.title}</p>
                                 <p className="">{item.descriptoin}</p>
-                                <div className="flex flex-row gap-2 justify-center" id="programming-languages">
+                                {/* <div className="flex flex-row gap-2 justify-center" id="programming-languages">
                                     <p className="px-3 py-1 cursor-pointer hover:bg-sky-700 font-semibold transition-all border-2 rounded-md">PHP</p>
                                     <p className="px-3 py-1 cursor-pointer hover:bg-sky-700 font-semibold transition-all border-2 rounded-md">Laravel</p>
-                                </div>
+                                </div> */}
                                 <div>
                                     <a href={item.href} className="hover:bg-sky-700 bg-sky-900 font-semibold border-2 border-sky-700 text-xl px-5 py-2 rounded-md">Visit</a>
                                 </div>
