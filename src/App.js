@@ -118,11 +118,11 @@ const [init, setInit] = useState(false);
       <Skills/>
       <Contact/>
       <Footer/>
-      <Particles
+      {/* <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-      />
+      /> */}
 
     </div>
   );

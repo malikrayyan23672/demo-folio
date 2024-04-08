@@ -13,7 +13,7 @@ function Skills(){
     ])
 
     return(
-        <section className="Skills mt-24 max-lg:h-full">
+        <section className="mt-24 max-lg:h-full">
 
             <div>
                 <Textanim text="Skills" fading="fade-right"/>
