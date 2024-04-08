@@ -1,7 +1,6 @@
 import  Typewriter  from "typewriter-effect";
 import { MdWavingHand } from "react-icons/md";
-
-
+import data from "./../../data.js"
 function Home() {
 
     return (
@@ -13,10 +12,10 @@ function Home() {
                 </div> */}
                 <div className="flex flex-col text-center items-center gap-1">
                     <MdWavingHand className="text-3xl text-sky-500" />
-                    <p className=" text-6xl text-sky-0">Hi, i'm <span className="font-semibold text-6xl">Malik Rayyan</span></p>
+                    <p className=" text-6xl text-sky-0">Hi, i'm <span className="font-semibold text-6xl">{data.personal.name}</span></p>
                     <p className="font-semibold text-6xl text-[#FCFF7C]"><Typewriter
                     options={{
-                        strings: ['Software Developer', 'Computer Science Student'],
+                        strings: data.typewriter,
                         autoStart: true,
                         loop: true,
                     }}
