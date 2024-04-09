@@ -53,7 +53,7 @@ function Skills(){
                         <div className="grid grid-cols-3 gap-3">
                             {technology.map((item) => (
                                 <div className="bg-white rounded-md flex flex-col text-center p-2 hover:scale-105 transition-all">
-                                    <img alt="" className="w-36 h-36" src={item.icon} />
+                                    <img alt="" className="w-full h-full" src={item.icon} />
                                     <p className="font-semibold text-gray-500">{item.title}</p>
                                 </div>
                             ))}

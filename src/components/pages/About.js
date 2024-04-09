@@ -45,9 +45,9 @@ function About() {
 
                     </div>
                     <div className="grid grid-cols-2 gap-3 max-md:grid-cols-1 gap-2">
-                        <img alt="" className="w-72 h-96 rounded-md" src="./assets/images/1.jpg" />
-                        <img alt="" className="w-72 h-96 rounded-md" src="./assets/images/2.jpg" />
-                        <img alt="" className="w-72 h-96 rounded-md" src="./assets/images/3.jpg" />
+                        <img alt="" loading="lazy" className="w-72 h-96 rounded-md" src="./assets/images/1.jpg" />
+                        <img alt="" loading="lazy" className="w-72 h-96 rounded-md" src="./assets/images/2.jpg" />
+                        <img alt="" loading="lazy" className="w-72 h-96 rounded-md" src="./assets/images/3.jpg" />
                     </div>
                 </div>
             </div>

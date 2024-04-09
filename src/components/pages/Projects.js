@@ -79,7 +79,7 @@ function Projects() {
                 <Textanim text="Projects" fading="fade-right" />
             </div>
 
-            <div className="flex flex-row float-right gap-2 items-center mr-3">
+            <div className="flex flex-row float-right gap-2 items-center mr-3 mt-3">
                 <div className="p-3 bg-gray-600 hover:bg-gray-500 transition-all rounded-md cursor-pointer list_sort_btn" onClick={listSort}>
 
                     <IoList className="text-2xl" />

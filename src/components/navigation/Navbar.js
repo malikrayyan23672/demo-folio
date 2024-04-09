@@ -55,6 +55,9 @@ function Navbar() {
     })
     return (
         <div className="w-full m-auto bg-[#1F2125] fixed top-0 z-20 max-sm:p-3">
+            {/* <div className="main_logo hidden max-md:block">
+                <img width="200" src="./assets/images/malik-logo2.png"/>
+            </div> */}
             <div className="p-2 float-right bg-gray-600 rounded-sm cursor-pointer navbar_btn" onClick={handleNavBar}>
                 <FaBars className="text-2xl" />
             </div>
