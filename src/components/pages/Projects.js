@@ -12,6 +12,7 @@ function Projects() {
     const [project, setProject] = useState([
         { title: "demo-folio", thumbnail: "./assets/images/react-logo.png", description: "My personal Portfolio", href: "https://github.com/malikrayyan23672/demo-folio" },
         { title: "Sudoku Solver", thumbnail: "./assets/images/java-bg.png", description: "GUI based Sudoku Solver using Java", href: "https://github.com/malikrayyan23672/sudoku-solver" },
+        { title: "Key Generater", thumbnail: "./assets/images/php-bg.png", description: "Random Key generator writting in php", href: "https://github.com/malikrayyan23672/key-generator" },
     ]);
 
     const sideBtnRef = useRef();
